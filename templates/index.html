@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Samson Simeon - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <h1>Samson Simeon</h1>
+        <p>FullStack Web Developer</p>
+    </header>
+    <nav>
+        <!-- navigation links for sections -->
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <!-- About me section -->
+        <div>
+            <img src="../static/image/photo_2023-07-24_13-23-07.jpg" alt="profileImage">
+            <h1>Samson Simeon</h1>
+            <p>FullStack Web Developer</p>
+        </div>
+        <div>
+            <p>Experienced full-stack web developer with a strong background in 
+                front-end and back-end technologies. Proficient in building and maintaining web applications, 
+                ensuring they are both visually appealing and fully functional. Skilled in HTML, CSS, JavaScript,
+                 as well as server-side programming languages and databases. Adept at creating seamless user experiences, 
+                implementing RESTful APIs, and problem-solving throughout the development process.</p>
+        </div>
+    </section>
+    <section id="skills">
+        <!-- Skills section -->
+        <div>
+            <h2>Frontend</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Backend</h2>
+            <ul>
+                <li>Python</li>
+                <li>PHP</li>
+                <li>NodeJS</li>
+                <li>ExpressJS</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Database</h2>
+            <ul>
+                <li>SQL</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+            </ul>
+        </div>
+    </section>
+    <section id="projects">
+        <!-- Projects section -->
+        <div>
+            <h1>Business Website</h1>
+            <a href="https://github.com/Samson1340/business_website.git" target="_blank">Click Here to See the Source code</a>
+        </div>
+        <div>
+            <h1>News Homepage Main</h1>
+            <a href="https://github.com/Samson1340/news-homepage-main.git" target="_blank">Click Here to See the Source code</a>
+        </div>
+        <div>
+            <h1>To Do List</h1>
+            <a href="https://github.com/Samson1340/To-do-list.git" target="_blank">Click Here to See the Source code</a>
+        </div>
+    </section>
+    <section id="contact">
+        <form action="/submit_form" method="post" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        
+            <input type="submit" value="Send">
+        </form>      
+    </section>
+    <footer>
+        <!-- Footer content -->
+        <div>
+            <p>samsonsimeon2004@gmail.com</p>
+            <p>+251913405908</p>
+            <p>Addis Ababa, Ethiopia</p>
+        </div>
+        <div>
+            <h5>Social Media</h5>
+            <a href="https://facebook.com/samsonsimeon19"><span class="bi bi-facebook"></span></a>
+            <a href="https://whatsapp.com/samsonsimeon19"><span class="bi bi-whatsapp"></span></a>
+            <a href="https://youtube.com/samsonsimeon19"><span class="bi bi-youtube"></span></a>
+            <a href="https://telegram.com/samsonsimeon19"><span class="bi bi-telegram"></span></a>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='validation.js') }}"></script>
+</body>
+</html>
